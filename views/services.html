@@ -1,0 +1,15 @@
+<section id="aboutus">
+<div class="row">
+  <div class="card-panel hoverable heading center">
+    <h2 class="red-text darken-4 heading-text truncate hide-on-small-only">Our Services</h2>
+    <label style="font-size:24px;" class="red-text darken-4 heading-text truncate hide-on-med-and-up">Our Services</label>
+    <label class="black-text heading-quote">{{ subHeading }}</label><br><br>
+    <ul class="collapsible popout hoverable" ng-repeat="service in serviceslist">
+      <li>
+        <div class="tooltipped collapsible-header" data-tooltip="Click to view more about {{ service.category }}"><i class="material-icons left">star_rate</i>{{ service.category }}</div>
+        <div class="collapsible-body"><p>{{ service.detail }}</p></div>
+      </li>
+    </ul>
+  </div>
+</div>
+</section>

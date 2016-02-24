@@ -1,0 +1,30 @@
+  <section id="aboutus">
+  <div class="row">
+	  <div class="card-panel hoverable heading center">
+	    <h2 class="red-text darken-4 heading-text truncate hide-on-small-only">About Us</h2>
+      <label style="font-size:24px;" class="red-text darken-4 heading-text truncate hide-on-med-and-up">About Us</label>
+	    <label class="black-text heading-quote">{{ subHeading }}</label>
+	    <h6 class="black-text darken-5" ng-repeat="line in about">
+	      {{line}}
+	    </h6>
+	    <h6 class="black-text">Vila Events and Entertainments is probably most well known and valued for its successes in the following areas:</h6>
+	    <div class="row" id="aboutlist">
+	    <div class="col s3 m4 l4 hide-on-small-only" ng-repeat="about in aboutlist">
+	    <div class="card-panel red" id="aboutlistcards">
+          <span class="black-text" style="font-weight: bold;font-size: 20px;">
+          	{{ about.category }}
+          </span>
+         </div>
+        </div>
+        <div class="col s12 hide-on-med-and-up" ng-repeat="about in aboutlist">
+	    <div class="card-panel red" id="aboutlistcards">
+          <span class="black-text" style="font-weight: bold;font-size: 18px;">
+          	{{ about.category }}
+          </span>
+         </div>
+        </div>
+        </div>
+	  </div>
+	  <!-- <div class="parallax"><img src="images/bg.png" alt="Background banner" width="100%"></div> -->
+	</div>
+  </section>

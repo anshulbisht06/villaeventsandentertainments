@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="villaEventsAndEntertainments">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Vila Events and Entertainments is newly founded event company located in Noida. Works mostly in Delhi/NCR. Provides manpower for weddings, parties, and shows etc">
+    <meta name="keywords" content="vilaevents vilaeventsentertainments  vilaeventsandentertainments NCR Delhi vila events entertainments">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head
+         content must come *after* these tags -->
+    <title>Vila Events and Entertainments</title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+    <!-- build:css styles/main.css  -->
+    <link href="css/materialize.css" rel="stylesheet">
+    <link href="css/mystyles.css" rel="stylesheet">
+    <!-- endbuild -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-72566444-1', 'auto');
+      ga('send', 'pageview');
+   </script>
+
+</head>
+
+<body>
+<header>
+  <div class="navbar-fixed">
+  <ul id="dropdown1" class="dropdown-content" ng-controller="GalleryController">
+    <li ng-click="showGallery('Corporate Events')"><a href="javascript:void(0)">Corporate Events</a></li>
+    <!-- <li ng-click="showGallery('Birthday Parties')"><a href="javascript:void(0)">Birthday Parties</a></li> -->
+    <li ng-click="showGallery('Promotional Activity')"><a href="javascript:void(0)">Promotional Activity</a></li>
+  </ul>
+  <nav class="lighten-1" role="navigation" style="background-color: white;">
+    <div class="nav-wrapper blue-text">
+      <a id="logo-container" href="/" class="brand-logo center"><img src="images/nav_logo.png" alt="Logo" class="tooltipped" width="100%" data-position="top" data-tooltip="Home Page"></a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse red lighten-2"><i class="mdi-navigation-menu"></i></a>
+      <ul class="right hide-on-med-and-down red lighten-2">
+        <li>
+        <a href="#aboutus">About Us</a>
+        </li>
+        <li><a href="#services">Services</a></li>
+        <li><a class="dropdown-button" href="javascript:void(0)" data-activates="dropdown1">Gallery</a></li>
+        <li><a href="#contactus">Contact Us</a></li>
+      </ul>
+      <ul id="dropdown2" class="dropdown-content hide-on-med-and-down" ng-controller="GalleryController">
+        <li ng-click="showGallery('Corporate Events')"><a href="javascript:void(0)">Corporate Events</a></li>
+        <!-- <li ng-click="showGallery('Birthday Parties')"><a href="javascript:void(0)">Birthday Parties</a></li> -->
+        <li ng-click="showGallery('Promotional Activity')"><a href="javascript:void(0)">Promotional Activity</a></li>
+      </ul>
+      <ul class="side-nav red lighten-4" id="mobile-demo">
+        <li>
+        <a href="#aboutus">About Us</a>
+        </li>
+        <li><a href="#services">Services</a></li>
+        <li><a class="dropdown-button" href="javascript:void(0)" data-activates="dropdown2">Gallery</a></li>
+        <li><a href="#contactus">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+  </div>
+</header>
+
+<main>
+   <div id="galleryModal" class="modal bottom-sheet" ng-controller="GalleryController">
+    <div class="modal-content">
+        <h4>Pictures for <span class="blue-text" id="selectedCategory"></span></h4>
+        <p id="slideshow"></p>
+      </div>
+      <div class="modal-footer">
+        <a href="javascript:void(0)" ng-click="closeGallery();" class="red modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>
+    <div class="slider" ng-controller="IndexController">
+      <ul class="slides">
+        <li ng-repeat="images in introductionCarousel">
+          <img src="{{ images }}" alt="Images Not available."> <!-- random image -->
+          <div class="caption center-align">
+           <div class="card-panel hoverable heading center">
+              <h2 class="red-text darken-4 heading-text truncate hide-on-small-only">Vila Events and Entertainments</h2>
+              <label style="font-size:13px;" class="red-text darken-4 heading-text truncate hide-on-med-and-up">Vila Events and Entertainments</label>
+              <label class="black-text hide-on-med-and-up" style="font-size:13px;">Events connect people, breeds innovation, builds communities and spark change.</label>
+              <label class="black-text heading-quote hide-on-small-only">Events connect people, breeds innovation, builds communities and spark change.</label><br><br>
+              <label class="center hoverable">
+                <a href="https://www.facebook.com/Vila-events-203813266626073/" target="_blank">
+                  <i class="tooltipped indigo-text darken-4 fa fa-facebook fa-3x" data-tooltip="View Facebook Page"></i>
+                </a>
+                <a href="javascript:void(0);" target="_blank" style="margin-left: 60px;">
+                  <i class="tooltipped blue-text fa fa-twitter fa-3x" data-tooltip="View Twitter Page"></i>
+                </a>
+              </label>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  <section id="aboutus" ng-controller="AboutController">
+    <div class="row">
+      <div class="card-panel hoverable heading center" id="aboutusCard">
+        <h2 class="red-text darken-4 heading-text truncate hide-on-small-only">About Us</h2>
+        <label style="font-size:24px;" class="red-text darken-4 heading-text truncate hide-on-med-and-up">About Us</label>
+        <label class="blue-text heading-quote">We’d like to invite you to a very special event – your own.</label>
+        <h6 class="black-text darken-5" ng-repeat="line in about">
+          {{line}}
+        </h6>
+        <h6 class="black-text">Vila Events and Entertainments is probably most well known and valued for its successes in the following areas:</h6>
+        <div class="row" id="aboutlist">
+        <div class="col s3 m4 l4 hide-on-small-only" ng-repeat="about in aboutlist">
+        <div class="card-panel red aboutlistcards">
+            <span class="black-text" style="font-weight: bold;font-size: 20px;">
+              {{ about.category }}
+            </span>
+           </div>
+          </div>
+          <div class="col s12 hide-on-med-and-up" ng-repeat="about in aboutlist">
+        <div class="card-panel red" id="aboutlistcards">
+            <span class="black-text" style="font-weight: bold;font-size: 18px;">
+              {{ about.category }}
+            </span>
+           </div>
+          </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" ng-controller="ServicesController">
+    <div class="row">
+      <div class="card-panel hoverable heading center" id="servicesCard">
+        <h2 class="red-text darken-4 heading-text truncate hide-on-small-only">Our Services</h2>
+        <label style="font-size:24px;" class="red-text darken-4 heading-text truncate hide-on-med-and-up">Our Services</label>
+        <label class="blue-text heading-quote">We specialize in providing intensive and equally exclusive event management services.</label><br><br>
+        <ul class="collapsible popout" data-collapsible="accordion" id="servicesItems">
+          <li ng-repeat="service in serviceslist">
+            <div class="tooltipped collapsible-header" data-tooltip="Click to view more about {{ service.category }}"><i class="fa fa-star fa-2x star"></i>{{ service.category }}</div>
+            <div class="collapsible-body"><p>{{ service.detail }}</p></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section id="gallery" ng-controller="GalleryController">
+  </section>
+
+
+  <section id="contactus">
+    <div class="row">
+      <div class="card-panel hoverable heading center" id="contactusCard">
+        <h2 class="red-text darken-4 heading-text truncate hide-on-small-only">Contact Us</h2>
+        <label style="font-size:24px;" class="red-text darken-4 heading-text truncate hide-on-med-and-up">Contact Us</label>
+        <br><br>
+        <div class="row hide-on-small-only">
+          <div class="col m6 s6 l6">
+            <div class="row">
+              <h4 class="black-text center">Address Information</h4>
+            </div>
+            <div class="row left">
+              <div class="row left red-text darken-4">
+                <b>F - 28, Sector - 44, Noida,</b><br>
+                <b>Gautam Budh Nagar, Uttar Pradesh.</b><br>
+                <b>Near Mahamaya Balika Inter College</b>
+              </div>
+            <div class="row red-text darken-4 left">
+          <div class="row">
+            <i class="black-text fa fa-mobile fa-2x"></i>
+          </div>
+          <div class="row">
+            <b>Nitin Rana - <span class="blue-text center">7503774350, 7503277200</span></b>
+          </div>
+          <div class="row">
+            <b>Laxman Rawat - <span class="blue-text center">7835856821</span></b>
+          </div>
+        </div>
+            <div class="row red-text darken-4 left">
+          <div class="row">
+            <i class="black-text fa fa-envelope fa-2x"></i>
+          </div>
+          <div class="row">
+            <b><a class="blue-text" href="mailto:vilaevents36@gmail.com">vilaevents36@gmail.com</a></b>
+          </div>
+            </div>
+            </div>
+          </div>
+          <div class="col m6 s6 l6">
+            <div class="video-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.7007920424844!2d77.33568023042491!3d28.54871185680329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5d3e477d5af%3A0x5856abcc7e063ccc!2sF-28%2C+F+Block%2C+Sector+44%2C+Noida%2C+Uttar+Pradesh+201303!5e0!3m2!1sen!2sin!4v1453194069521" width="100%" height="100%" frameborder="0" style="border:2px solid" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="row hide-on-med-and-up">
+          <div class="row">
+            <div class="row">
+              <h5 class="black-text center">Address Information</h5>
+            </div>
+            <div class="row left">
+              <div class="row left red-text darken-4">
+                <b>F - 28, Sector - 44, Noida,</b><br>
+                <b>Gautam Budh Nagar, Uttar Pradesh.</b><br>
+                <b>Near Mahamaya Balika Inter College</b>
+              </div>
+            <div class="row red-text darken-4 left">
+              <div class="row">
+            <i class="black-text fa fa-mobile fa-2x"></i>
+          </div>
+          <div class="row">
+            <b>Nitin Rana - <span class="blue-text center">7503774350, 7503277200</span></b>
+          </div>
+          <div class="row">
+            <b>Laxman Rawat - <span class="blue-text center">7835856821</span></b>
+          </div>
+            </div>
+            <div class="row red-text darken-4 left">
+              <div class="row">
+            <i class="black-text fa fa-envelope fa-2x"></i>
+          </div>
+          <div class="row">
+            <b><a class="blue-text" href="mailto:vilaevents36@gmail.com">vilaevents36@gmail.com</a></b>
+          </div>
+            </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="video-container">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.67749549494!2d77.33573241508073!3d28.54941188245075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5d3fcc89f51%3A0x37b426465a2649d7!2sF-26%2C+F+Block%2C+Sector+44%2C+Noida%2C+Uttar+Pradesh+201303!5e0!3m2!1sen!2sin!4v1453148051849" width="100%" height="100%" frameborder="5px" style="border:2px solid" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <!-- build:js scripts/main.js  -->
+    <script src="js/jquery.js"></script>
+    <!--  <script src="js/lightbox.js"></script> -->
+    <script src="js/materialize.js"></script>
+    <script src="js/angular.js"></script>
+    <!--  <script src="js/angular-ui-router.js"></script> -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers.js"></script>
+    <script src="scripts/services.js"></script>
+    <script src="scripts/ui.js"></script>
+  <!-- endbuild -->
+</body>
+</html>

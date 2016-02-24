@@ -1,0 +1,14 @@
+<div class="row" id="home">
+  <div class="card-panel hoverable heading center">
+    <h2 class="red-text darken-4 heading-text truncate hide-on-small-only">Vila Events and Entertainments</h2>
+    <label style="font-size:20px;" class="red-text darken-4 heading-text truncate hide-on-med-and-up">Vila Events and Entertainments</label>
+    <label class="black-text heading-quote">Events connect people, breeds innovation, builds communities and spark change.</label>
+    <h6 class="black-text">
+      <span  ng-repeat="link in socialLinks">
+      <a href="{{ link.url }}" style="margin-right:10px;" target="_blank">
+      <img src="{{ link.image }}" alt="Logo" class="tooltipped hoverable" data-tooltip="View Facebook Page">
+      </a>
+      </span>
+    </h6>
+  </div>
+</div>
