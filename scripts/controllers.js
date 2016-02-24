@@ -28,7 +28,7 @@ angular.module('villaEventsAndEntertainments')
                     $('#slideshow').html(galleryHtml+'</div>');
                     $('.carousel').carousel();
                     $('.materialboxed').materialbox();
-                    Materialize.toast('Click on each picture of swipe/drag along.', 6000, 'rounded');
+                    Materialize.toast('Click on each picture or swipe/drag along.', 6000, 'rounded');
                   },
                   complete: function() {
                     $('#selectedCategory').html('')
