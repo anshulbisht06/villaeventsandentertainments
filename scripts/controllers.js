@@ -37,7 +37,6 @@ angular.module('villaEventsAndEntertainments')
                 );
             }
             $scope.closeGallery = function(){
-                $('#galleryModal').closeModal();
-                $('#materialbox-overlay').hide();
+                window.location.reload();
             }
         }]);
