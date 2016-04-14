@@ -1,15 +1,31 @@
 angular.module('villaEventsAndEntertainments')
-        .controller('IndexController', ['$scope', 'indexFactory', function($scope, indexFactory) {
+        .controller('IndexController', ['$scope', '$anchorScroll', '$location', 'indexFactory', function($scope, $anchorScroll, $location, indexFactory) {
             $scope.socialLinks = indexFactory.socialLinks;
             $scope.bgImage = indexFactory.bgImage;
             $scope.introductionCarousel = indexFactory.introductionCarousel;
+
+            $scope.goTo = function(section){
+                if($location.hash() !== section) {
+                    $location.hash(section);
+                    indexFactory.scrollTo(section);
+                }else {
+                }
+            }
         }])
         .controller('AboutController', ['$scope', 'indexFactory', function($scope, indexFactory) {
             $scope.about = indexFactory.about;
             $scope.aboutlist = indexFactory.aboutlist;
+            $scope.extraAboutList = indexFactory.extraAboutList;
         }])
         .controller('ServicesController', ['$scope', 'indexFactory', function($scope, indexFactory) {
-            $scope.serviceslist = indexFactory.services;
+            var serviceslist = [];
+            for(var i=0;i<indexFactory.aboutlist.length;i++){
+                serviceslist.push(indexFactory.aboutlist[i]);
+            }
+            for(var i=0;i<indexFactory.extraAboutList.length;i++){
+                serviceslist.push(indexFactory.extraAboutList[i]);
+            }
+            $scope.serviceslist = serviceslist;
         }])
         .controller('GalleryController', ['$scope', 'galleryFactory', function($scope, galleryFactory) {
             $scope.showGallery = function(category){

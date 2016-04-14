@@ -8,8 +8,7 @@
     <meta name="keywords" content="vilaevents vilaeventsentertainments  vilaeventsandentertainments NCR Delhi vila events entertainments">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head
-         content must come *after* these tags -->
+    <base href="/">
     <title>Vila Events and Entertainments</title>
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
     <!-- build:css styles/main.css  -->
@@ -31,52 +30,33 @@
 
 <body>
 <header>
-  <div class="navbar-fixed">
-  <ul id="dropdown1" class="dropdown-content" ng-controller="GalleryController">
-    <li ng-click="showGallery('Corporate Events')"><a href="javascript:void(0)">Corporate Events</a></li>
-    <!-- <li ng-click="showGallery('Birthday Parties')"><a href="javascript:void(0)">Birthday Parties</a></li> -->
-    <li ng-click="showGallery('Promotional Activity')"><a href="javascript:void(0)">Promotional Activity</a></li>
-  </ul>
-  <nav class="lighten-1" role="navigation" style="background-color: white;">
-    <div class="nav-wrapper blue-text">
-      <a id="logo-container" href="/" class="brand-logo center"><img src="images/nav_logo.png" alt="Logo" class="tooltipped" width="100%" data-position="top" data-tooltip="Home Page"></a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse red lighten-2"><i class="mdi-navigation-menu"></i></a>
-      <ul class="right hide-on-med-and-down red lighten-2">
-        <li>
-        <a href="#aboutus">About Us</a>
-        </li>
-        <li><a href="#services">Services</a></li>
-        <li><a class="dropdown-button" href="javascript:void(0)" data-activates="dropdown1">Gallery</a></li>
-        <li><a href="#contactus">Contact Us</a></li>
-      </ul>
-      <ul id="dropdown2" class="dropdown-content hide-on-med-and-down" ng-controller="GalleryController">
-        <li ng-click="showGallery('Corporate Events')"><a href="javascript:void(0)">Corporate Events</a></li>
-        <!-- <li ng-click="showGallery('Birthday Parties')"><a href="javascript:void(0)">Birthday Parties</a></li> -->
-        <li ng-click="showGallery('Promotional Activity')"><a href="javascript:void(0)">Promotional Activity</a></li>
-      </ul>
-      <ul class="side-nav red lighten-4" id="mobile-demo">
-        <li>
-        <a href="#aboutus">About Us</a>
-        </li>
-        <li><a href="#services">Services</a></li>
-        <li><a class="dropdown-button" href="javascript:void(0)" data-activates="dropdown2">Gallery</a></li>
-        <li><a href="#contactus">Contact Us</a></li>
-      </ul>
-    </div>
-  </nav>
+  <div class="navbar-fixed" ng-controller="IndexController">
+    <nav class="lighten-1" role="navigation" style="background-color: white;">
+      <div class="nav-wrapper blue-text">
+        <a id="logo-container" href="/" class="brand-logo center"><img src="images/nav_logo.png" alt="Logo" class="tooltipped" width="100%" data-position="top" data-tooltip="Home Page"></a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse red lighten-2"><i class="mdi-navigation-menu"></i></a>
+        <ul class="right hide-on-med-and-down red lighten-2">
+          <li>
+          <a href="" ng-click="goTo('aboutus')">About Us</a>
+          </li>
+          <li><a href="" ng-click="goTo('services')">Services</a></li>
+          <!-- <li><a href="" ng-click="goTo('gallery')">Gallery</a></li> -->
+          <li><a href="" ng-click="goTo('contactus')">Contact Us</a></li>
+        </ul>
+        <ul class="side-nav red lighten-4" id="mobile-demo">
+          <li>
+          <a href="" ng-click="goTo('aboutus')">About Us</a>
+          </li>
+          <li><a href="" ng-click="goTo('services')">Services</a></li>
+          <!-- <li><a href="" ng-click="goTo('gallery')">Gallery</a></li> -->
+          <li><a href="" ng-click="goTo('contactus')">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
   </div>
 </header>
 
 <main>
-   <div id="galleryModal" class="modal bottom-sheet" ng-controller="GalleryController">
-    <div class="modal-content">
-        <h4>Pictures for <span class="blue-text" id="selectedCategory"></span></h4>
-        <p id="slideshow"></p>
-      </div>
-      <div class="modal-footer">
-        <a href="javascript:void(0)" ng-click="closeGallery();" class="red modal-action modal-close waves-effect waves-green btn-flat">Close</a>
-      </div>
-    </div>
     <div class="slider" ng-controller="IndexController">
       <ul class="slides">
         <li ng-repeat="images in introductionCarousel">
@@ -112,21 +92,30 @@
         </h6>
         <h6 class="black-text">Vila Events and Entertainments is probably most well known and valued for its successes in the following areas:</h6>
         <div class="row" id="aboutlist">
-        <div class="col s3 m4 l4 hide-on-small-only" ng-repeat="about in aboutlist">
-        <div class="card-panel red aboutlistcards">
-            <span class="black-text" style="font-weight: bold;font-size: 20px;">
-              {{ about.category }}
-            </span>
-           </div>
+          <div class="col s3 m4 l4 hide-on-small-only" ng-repeat="about in aboutlist">
+            <div class="card-panel red aboutlistcards">
+                <span class="black-text" style="font-weight: bold;font-size: 20px;">
+                  {{ about.category }}
+                </span>
+            </div>
           </div>
           <div class="col s12 hide-on-med-and-up" ng-repeat="about in aboutlist">
-        <div class="card-panel red" id="aboutlistcards">
-            <span class="black-text" style="font-weight: bold;font-size: 18px;">
-              {{ about.category }}
-            </span>
-           </div>
+            <div class="card-panel red" id="aboutlistcards">
+                <span class="black-text" style="font-weight: bold;font-size: 18px;">
+                  {{ about.category }}
+                </span>
+            </div>
           </div>
+        </div>
+        <div class="row">
+          <div class="col s12" ng-repeat="extra in extraAboutList">
+            <div class="card-panel red">
+              <span class="black-text" style="font-weight: bold;font-size: 20px;">
+                {{ extra.category }}
+              </span>
+            </div>
           </div>
+        </div>
       </div>
     </div>
   </section>
@@ -236,7 +225,7 @@
     <!--  <script src="js/lightbox.js"></script> -->
     <script src="js/materialize.js"></script>
     <script src="js/angular.js"></script>
-    <!--  <script src="js/angular-ui-router.js"></script> -->
+    <script src="js/angular-ui-router.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers.js"></script>
     <script src="scripts/services.js"></script>
