@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  $('section').css('height',$(window).height());
 	$('.tooltipped').tooltip({delay: 25});
   $('.button-collapse').sideNav({
     menuWidth: 250,
