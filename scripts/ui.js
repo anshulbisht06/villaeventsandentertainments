@@ -1,5 +1,7 @@
 $(document).ready(function(){
-  $('section').css('height',$(window).height());
+  var viewPortHeight = $(window).height();
+  $('section').css('height', viewPortHeight);
+  $('#headingSlider').css('height', viewPortHeight);
 	$('.tooltipped').tooltip({delay: 25});
   $('.button-collapse').sideNav({
     menuWidth: 250,

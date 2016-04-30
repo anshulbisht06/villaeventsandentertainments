@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="villaEventsAndEntertainments">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,12 +20,9 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
       ga('create', 'UA-75382124-1', 'auto');
       ga('send', 'pageview');
-
     </script>
-
 </head>
 
 <body>
@@ -58,7 +54,7 @@
 </header>
 
 <main>
-    <div class="slider" ng-controller="IndexController">
+    <div class="slider" ng-controller="IndexController" id="headingSlider">
       <ul class="slides">
         <li ng-repeat="images in introductionCarousel">
           <img src="{{ images }}" alt="Images Not available."> <!-- random image -->
