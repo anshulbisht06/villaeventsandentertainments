@@ -6,7 +6,7 @@
     <h6 class="black-text">
       <span  ng-repeat="link in socialLinks">
       <a href="{{ link.url }}" style="margin-right:10px;" target="_blank">
-      <img src="{{ link.image }}" alt="Logo" class="tooltipped hoverable" data-tooltip="View Facebook Page">
+      <img ng-src="{{ link.image }}" alt="Logo" class="tooltipped hoverable" data-tooltip="View Facebook Page">
       </a>
       </span>
     </h6>
