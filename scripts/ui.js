@@ -11,10 +11,8 @@ $(document).ready(function(){
     selector: 'section.content',
     mouseSwipeDisance: 40,
     afterSlide: function (index) {
-      console.log(index);
      },
     beforeSlide: function (index) {
-      console.log(index,'before');
       // $('.site--header li').removeClass('active');
       // $('.site--header li').eq(index).addClass('active');
       // $('#scroll-down__btn').hide();
