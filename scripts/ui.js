@@ -4,50 +4,50 @@ $(document).ready(function(){
   // $('#headingSlider').css('height', viewPortHeight);
 	$('.tooltipped').tooltip({delay: 25});
 
-  var slider = $.fn.fsvs({
-    autoPlay: false,
-    speed: 1000,
-    bodyID: 'content',
-    selector: 'section.content',
-    mouseSwipeDisance: 40,
-    afterSlide: function (index) {
-      console.log(index);
-     },
-    beforeSlide: function (index) {
-      console.log(index,'before');
-      // $('.site--header li').removeClass('active');
-      // $('.site--header li').eq(index).addClass('active');
-      // $('#scroll-down__btn').hide();
-      // if(index=== 0) {
-      //   $('.site--header').removeClass('nav-fadeIn');
-      //   setTimeout(function() {
-      //     $('.site--header').removeClass('top');
-      //     $('.site--header .brand-logo img').attr('src', 'images/sports-unity-logo.png');
-      //     $('.site--header').addClass('pos');
-      //     $('.site--header').addClass('header--alt');
-      //   }, 1000);
-      // } else {
-      //   $('.site--header').removeClass('pos');
-      //   $('.site--header').addClass('top');
-      //   setTimeout(function() {
-      //     $('.site--header .brand-logo img').attr('src', 'images/navigation__logo.png');
-      //     $('.site--header').removeClass('header--alt');
-      //     $('.site--header').addClass('nav-fadeIn');
-      //   }, 1000);
-      // }
-     },
-    endSlide: function (index) {
-      console.log('end index: ' + index);
-     },
-    mouseWheelEvents: true,
-    mouseWheelDelay: false,
-    mouseDragEvents: true,
-    touchEvents: true,
-    arrowKeyEvents: true,
-    pagination: true,
-    nthClasses: 2,
-    detectHash: false
-  });
+  // var slider = $.fn.fsvs({
+  //   autoPlay: false,
+  //   speed: 1000,
+  //   bodyID: 'content',
+  //   selector: 'section.content',
+  //   mouseSwipeDisance: 40,
+  //   afterSlide: function (index) {
+  //     console.log(index);
+  //    },
+  //   beforeSlide: function (index) {
+  //     console.log(index,'before');
+  //     // $('.site--header li').removeClass('active');
+  //     // $('.site--header li').eq(index).addClass('active');
+  //     // $('#scroll-down__btn').hide();
+  //     // if(index=== 0) {
+  //     //   $('.site--header').removeClass('nav-fadeIn');
+  //     //   setTimeout(function() {
+  //     //     $('.site--header').removeClass('top');
+  //     //     $('.site--header .brand-logo img').attr('src', 'images/sports-unity-logo.png');
+  //     //     $('.site--header').addClass('pos');
+  //     //     $('.site--header').addClass('header--alt');
+  //     //   }, 1000);
+  //     // } else {
+  //     //   $('.site--header').removeClass('pos');
+  //     //   $('.site--header').addClass('top');
+  //     //   setTimeout(function() {
+  //     //     $('.site--header .brand-logo img').attr('src', 'images/navigation__logo.png');
+  //     //     $('.site--header').removeClass('header--alt');
+  //     //     $('.site--header').addClass('nav-fadeIn');
+  //     //   }, 1000);
+  //     // }
+  //    },
+  //   endSlide: function (index) {
+  //     console.log('end index: ' + index);
+  //    },
+  //   mouseWheelEvents: true,
+  //   mouseWheelDelay: false,
+  //   mouseDragEvents: true,
+  //   touchEvents: true,
+  //   arrowKeyEvents: true,
+  //   pagination: true,
+  //   nthClasses: 2,
+  //   detectHash: false
+  // });
 
   $('.button-collapse').sideNav({
     menuWidth: 250,
@@ -91,15 +91,15 @@ $(document).ready(function(){
 
   Materialize.scrollFire(options);
 
-  $('.nav-wrapper ul li a').click(function(e) {
-    e.preventDefault();
-    var index = $(this).parent().index();
-    if(index === 0) {
-      slider.slideToIndex(1);
-    } else if(index === 1) {
-      slider.slideToIndex(2);
-    } else {
-      slider.slideToIndex(3);
-    }
-  })
+  // $('.nav-wrapper ul li a').click(function(e) {
+  //   e.preventDefault();
+  //   var index = $(this).parent().index();
+  //   if(index === 0) {
+  //     slider.slideToIndex(1);
+  //   } else if(index === 1) {
+  //     slider.slideToIndex(2);
+  //   } else {
+  //     slider.slideToIndex(3);
+  //   }
+  // })
 });
